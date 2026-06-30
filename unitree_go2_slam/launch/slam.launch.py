@@ -60,11 +60,12 @@ def generate_launch_description():
             '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
             '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
             '/joint_group_effort_controller/joint_trajectory@trajectory_msgs/msg/JointTrajectory]gz.msgs.JointTrajectory',
-            '/rgb_image@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/d455/image@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/d455/depth_image@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/d455/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked',
-            '/d455/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+            # '/rgb_image@sensor_msgs/msg/Image@gz.msgs.Image',
+            # D455 RGBD camera bridges
+            # '/d455/image@sensor_msgs/msg/Image[gz.msgs.Image',
+            # '/d455/depth_image@sensor_msgs/msg/Image[gz.msgs.Image',
+            # '/d455/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked',
+            # '/d455/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
         ]
     )
 
@@ -92,7 +93,7 @@ def generate_launch_description():
             {"odom_frame": "odom"}, {"world_frame": "odom"}, {
                 "publish_tf": True}, {"frequency": 50.0},
             {"two_d_mode": True}, {"odom0": "odom"},
-            {"odom0_config": [True, True, False, False, False, True,
+            {"odom0_config": [True, True, False, False, False, False,
                               True, True, False, False, False, True, False, False, False]}
         ]
     )
