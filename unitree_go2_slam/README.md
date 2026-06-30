@@ -2,6 +2,12 @@
 
 A complete ROS 2 (Jazzy) package for simulating, mapping, and autonomously navigating the Unitree Go2 quadruped robot in Gazebo. This package leverages `champ_base` for quadruped kinematics, `slam_toolbox` for 2D mapping, and the `nav2` stack for autonomous path planning and obstacle avoidance.
 
+## 📊 Simulation Environment
+
+|           Gazebo Arena            |      Rviz Visualization       |
+| :-------------------------------: | :---------------------------: |
+| ![Arena](images/gazebo_arena.png) | ![Go2 Model](images/rviz.png) |
+
 ## 🚀 Features
 
 - **Custom 20x20m Gazebo Arena:** A fully static obstacle course designed specifically for LiDAR SLAM testing.

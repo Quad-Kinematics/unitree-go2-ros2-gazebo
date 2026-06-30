@@ -53,16 +53,20 @@ sudo apt install ros-jazzy-velodyne-description
 ### 2. Clone the Workspace
 
 ```bash
-cd ~/ros2_ws/src
-# Replace with your actual repository URL
-git clone <YOUR_REPOSITORY_URL>
+# 1. Create the workspace directory and the 'src' folder
+mkdir -p ~/unitree_go_2_ros_ws/src
 
+# 2. Navigate into the source directory
+cd ~/unitree_go_2_ros_ws/src
+
+# 3. Clone your repository
+git clone https://github.com/Quad-Kinematics/unitree-go2-ros2-gazebo.git
 ```
 
 ### 3. Install Dependencies
 
 ```bash
-cd ~/ros2_ws
+cd ~/unitree_go_2_ros_ws
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 
@@ -71,7 +75,7 @@ rosdep install --from-paths src --ignore-src -r -y
 ### 4. Build the Workspace
 
 ```bash
-cd ~/ros2_ws
+cd ~/unitree_go_2_ros_ws
 colcon build
 source install/setup.bash
 
